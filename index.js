@@ -5,7 +5,7 @@ let ami  = "ami-0ff8a91507f77f867"; // AMI for Amazon Linux in us-east-1 (Virgin
 
 let group = new aws.ec2.SecurityGroup("webserver-secgrp", { 
     ingress: [
-        { protocol: "tcp", fromPort: 2222, toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
+        { protocol: "tcp", fromPort: 22, toPort: 22, cidrBlocks: ["0.0.0.0/0"] },
     ],
 });
 
